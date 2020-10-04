@@ -1,0 +1,8 @@
+.groupe{
+	
+	position: absolute;
+	left: 200px;
+	border-color: red;
+	width: 30%;
+	height: 60%;
+}
