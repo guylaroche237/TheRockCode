@@ -11,11 +11,15 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet"  href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet"  href="assets/css/bootstrap-theme.min.css">
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/npm.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
     <link rel="stylesheet"  href="styles/css/carousel.css">
     <link rel="stylesheet"  href="assets/css/bootstrap.min.css">
     <link rel="stylesheet"  href="plugins/jquery/jquery-ui.min.css">
     <link rel="stylesheet"  href="plugins/jquery/jquery-ui.structure.min.css">
-    <link rel="stylesheet"  href="assets/css/bootstrap-theme.min.css">
+    
     <link rel="stylesheet"  href="styles/css/style.css">
     <link rel="stylesheet"  href="styles/css/header.css">
 
@@ -26,6 +30,27 @@
     <script type="text/javascript">
       $(document).ready(function(){
         $("div.point").hide();
+
+        $(".sho-ceo").click(function(){
+          $(".ceo").slideDown(300);
+        });
+        $(".hide-ceo").click(function(){
+          $(".ceo").slideUp(300);
+        });
+
+        $(".sho-comp").click(function(){
+          $(".comp").slideDown(300);
+        });
+        $(".hide-comp").click(function(){
+          $(".comp").slideUp(300);
+        });
+
+        $(".sho-inf").click(function(){
+          $(".inf").slideDown(300);
+        });
+        $(".hide-inf").click(function(){
+          $(".inf").slideUp(300);
+        });
         $("p.chapitre").click(function(){
           $(this).next("div.point").slideDown(300).siblings("div.point").slideUp(1000);
           //siblings("div.point").slideUp("slow");
@@ -40,9 +65,17 @@
 
     <nav class="fixed-top navbar navbar-expand-md navbar-dark bg-dark mb-4">
       <a class="navbar-brand" href="#">
-        <div class="logo">
-          <img class="logo-image" width="160px" height="60px" src="images/logo.jpg">
+        <div class="col">
+          <div class="logo">
+            <img class="logo-image" width="160px" height="60px" src="images/logo.jpg">
+          </div>
+          <div class="logo-title">
+            <small>Population Innovative Solutions</small>
+          </div>
+
         </div>
+       
+        
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -121,7 +154,7 @@
 
       <div class="">
         
-        <section class="service paire">
+        <section class="service paire" id="corps">
 
           <div class="title">
             <h1>Nos Services</h1>
@@ -169,9 +202,9 @@
 
         <section class="detail service impaire">
           <div class="titre-impaire">
-            <h1>About PharmaSymbiosis</h1>
+            <h1>HISTORY & RATIONALE</h1>
           </div>
-          
+        <!---->  
           <div class="detail">
             <p>
               The founding members of PharmaSymbiosis bring with them a cumulative experience of more than 70 years of experience working with multinational pharmaceutical and diagnostics companies. The formation of the company was inspired by the increasing opportunities in the healthcare sector in Africa, as evidenced by:
@@ -257,10 +290,6 @@
             </ul>
           </div>
 
-          
-          
-      
-
         </section>
         <hr>
 
@@ -288,11 +317,16 @@
                 <div class="card mb-4 box-shadow">
                   <img class="card-img-top" src="images/joel.jpg" alt="Card image cap">
                   <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h3>CEO FOUNDER</h3>
+                    <h6>Mr ANDRE TAGNE SADO</h6>
+                    <p class="card-text ceo" style="display: none;">
+                      gddddddddddddddddddddddddddddddddddddddddddddddddddddd vvvvvvvvvvvvvvvvvvvvvvvmmmmmmmm  hhhhhhhhhhhhhhhhhhhhhhh
+                      
+                    </p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary sho-ceo">show</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary hide-ceo">hide</button>
                       </div>
                       <small class="text-muted">depuis 2018</small>
                     </div>
@@ -303,11 +337,13 @@
                 <div class="card mb-4 box-shadow">
                   <img class="card-img-top"  src="images/joel.jpg" alt="Card image cap">
                   <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h3>COMPTABLE</h3>
+                    <h6>Mlle Juliette KAKODA</h6>
+                    <p class="card-text comp" style="display: none;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary sho-comp">show</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary hide-comp">hide</button>
                       </div>
                       <small class="text-muted">9 mins</small>
                     </div>
@@ -318,11 +354,13 @@
                 <div class="card mb-4 box-shadow">
                   <img class="card-img-top" src="images/joel.jpg" alt="Card image cap">
                   <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <h3>INFORMATICIEN</h3>
+                    <h6>Mr CEDRICK ALLASANE</h6>
+                    <p class="card-text inf" style="display: none;">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                     <div class="d-flex justify-content-between align-items-center">
                       <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary sho-inf">show</button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary hide-inf">hide</button>
                       </div>
                       <small class="text-muted">depuis 2016</small>
                     </div>
@@ -330,51 +368,9 @@
                 </div>
               </div>
   
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <img class="card-img-top" src="images/joel.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      </div>
-                      <small class="text-muted">depuis 2020</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <img class="card-img-top" src="images/joel.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      </div>
-                      <small class="text-muted">depuis 2015</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card mb-4 box-shadow">
-                  <img class="card-img-top" src="images/joel.jpg" alt="Card image cap">
-                  <div class="card-body">
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                      </div>
-                      <small class="text-muted">depuis 2013</small>
-                    </div>
-                  </div>
-                </div>
-              </div> 
+             
+              
+      
               
             </div>
           </div>
@@ -413,17 +409,17 @@
             
             <div class="row">
               <article class="col-md-3 col-lg-3 col-xs-12 col-sm-12 item-folio">
-                <img  class="tofe" src="images/orange.jpg">
+                <img  class="tofe" src="images/partenaire.jpg">
                 
               </article>
               <article class="col-md-3 col-lg-3 col-xs-12 col-sm-12 item-folio">
-                <img  class="tofe" src="images/logo.jpg">
+                <img  class="tofe" src="images/partenaire1.jpg">
               </article>
               <article class="col-md-3 col-lg-3 col-xs-12 col-sm-12 item-folio">
-                <img  class="tofe" src="images/skype.png">
+                <img  class="tofe" src="images/partenaire3.jpg">
               </article>
               <article class="col-md-3 col-lg-3 col-xs-12 col-sm-12 item-folio">
-                <img  class="tofe" src="images/skype.png">
+                <img  class="tofe" src="images/unnamed.png">
               </article>
               
           
@@ -432,9 +428,7 @@
           
         </section>
 
-        <section class="detail service impaire">
-
-        
+        <section class="detail service impaire" id="actualite">
 
             <div class="row featurette">
               <div class="col-md-7">
@@ -471,79 +465,61 @@
        
       </div>
 
-
-      <!-- Marketing messaging and featurettes
-      ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
-
-      
-
-      <!-- FOOTER -->
-
     </section>
 
 
    
 
-    <main role="main">
-
-     
-      
-
-
-
-
-    </main>
-    <div class="container-fluid" id="footer">
-      <footer class="container py-5">
+    <div class="container-fluid">
+      <div class="container ">
         <div class="row">
           <div class="col-12 col-md">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
             <small class="d-block mb-3 text-muted">&copy; 2019-2020</small>
             <small class="d-block mb-3 text-muted">By Feukam Guy Laroche</small>
           </div>
+
           <div class="col-6 col-md">
-            <h5>Features</h5>
+            <h5>Contacter Nous</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Cool stuff</a></li>
-              <li><a class="text-muted" href="#">Random feature</a></li>
-              <li><a class="text-muted" href="#">Team feature</a></li>
-              <li><a class="text-muted" href="#">Stuff for developers</a></li>
-              <li><a class="text-muted" href="#">Another one</a></li>
-              <li><a class="text-muted" href="#">Last time</a></li>
+              <li><a class="text-muted" href="#">Telephone: +225 74 86 82 56</a></li>
+              <hr/>
+              <li><a class="text-muted" href="#">Email: andre.tagne@popinso.com</a></li>
+              <hr/>
+              
             </ul>
           </div>
+
           <div class="col-6 col-md">
-            <h5>Resources</h5>
+            <h5>Localisation</h5>
             <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Resource</a></li>
-              <li><a class="text-muted" href="#">Resource name</a></li>
-              <li><a class="text-muted" href="#">Another resource</a></li>
-              <li><a class="text-muted" href="#">Final resource</a></li>
+              <li><a class="text-muted" href="#">Pays: Abidjan-ivory coast</a></li>
+              <hr/>
+              <li><a class="text-muted" href="#">Ville: Cocody andre 9ieme tranche</a></li>
+              <hr/>
+              <li><a class="text-muted" href="#">Reference: Deriere CGK</a></li>
+              <hr/>
+
+              
             </ul>
           </div>
+
           <div class="col-6 col-md">
             <h5>Resources</h5>
             <ul class="list-unstyled text-small">
               <li><a class="text-muted" href="#">Business</a></li>
-              <li><a class="text-muted" href="#">Education</a></li>
-              <li><a class="text-muted" href="#">Government</a></li>
-              <li><a class="text-muted" href="#">Gaming</a></li>
+              <hr/>
+              
             </ul>
           </div>
-          <div class="col-6 col-md">
-            <h5>About</h5>
-            <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Team</a></li>
-              <li><a class="text-muted" href="#">Locations</a></li>
-              <li><a class="text-muted" href="#">Privacy</a></li>
-              <li><a class="text-muted" href="#">Terms</a></li>
-            </ul>
-          </div>
+  
         </div>
-      </footer>
-    
+      </div>
+
     </div>
+    
+    
+    
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
